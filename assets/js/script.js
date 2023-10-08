@@ -45,7 +45,8 @@ async function searchData(tipoMoneda, valorMoneda) {
       const valorMonedaSeleccionada = data.serie[0].valor;
 
       // agregar
-      resultSpan.innerHTML = (valorMoneda / valorMonedaSeleccionada).toFixed(2);
+      resultSpan.innerHTML =
+        (valorMoneda / valorMonedaSeleccionada).toFixed(2) + "$";
     }
   } catch (error) {
     console.log("Falló en cargar", error);
@@ -85,7 +86,8 @@ function crearData(serie) {
 function formateoFecha(fecha) {
   date = new Date(fecha);
   const year = date.getFullYear();
-  const month = date.getMonth();
+  const month = date.getMonth() + 1;
   const day = date.getDate();
+
   return `${day} - ${month} - ${year}`;
 }
