@@ -1,0 +1,15 @@
+* {
+  text-align: center;
+}
+
+body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main div {
+  margin-bottom: 15px;
+}
